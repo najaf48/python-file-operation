@@ -80,6 +80,42 @@ os.remove('old.txt')
 import glob 
 print(glob.glob('*'))
 
+#getpid() & getcwd
+print(os.getpid())
+print(os.getcwd())
+#print(os.getuid())
+#print(os.getgid())
+
+#import subprocess
+#ret=subprocess.getoutput('date')
+#ret=subprocess.getstatusoutput('date')
+#print(ret)
+
+import multiprocessing 
+import os 
+
+def do_this(what):
+    whoami(what)
+    
+def whoami(what):
+    print("Processing %s says: %s" %(os.getpid(),what))
+
+#if __name__=="__main__":
+#    whoami('Iam the main process')
+#    for n in range(0,4):
+#        p=multiprocessing.process(target=do_this,args=("Iam function %s" % n))
+#        p.start
+
+#p.terminate()
+
+
+
+
+
+
+
+
+
 
 
 
